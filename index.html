@@ -12,8 +12,8 @@
     <main class="bg-[#1E1E1E] min-h-screen bg-[url(images/background.png)] bg-no-repeat bg-center">
         <!-- ..........Home Screen............... -->
 
-        <section class="home min-h-screen flex justify-center items-center hidden">
-            <div class="flex flex-col justify-center items-center gap-y-5">
+        <section class="home min-h-screen flex justify-center items-center ">
+            <div class="flex flex-col justify-center items-center gap-y-10">
                 <h1 class="text-9xl text-[#FFFFFF] anton-regular">Alphabet Clash</h1>
                 <p class="text-[#FFFFFF] poppins-medium">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
                 <button class="bg-[#FFFFFF] h-14 w-32 rounded-xl text-[#010313] poppins-semibold">Play Now</button>
@@ -22,7 +22,7 @@
 
         <!--..............PlayGround...............  -->
 
-        <section class="playGround">
+        <section class="playGround hidden">
             <div class="flex justify-center items-center min-h-screen">
                 <!-- ...........Screen................ -->
                 <div class="flex flex-col justify-center items-center gap-10">
@@ -83,8 +83,20 @@
                 </div>
             </div>
         </section>
-        <section class="scoreBoard">
-    
+
+        <!-- ..................Score Board................. -->
+
+        <section class="scoreBoard hidden">
+            <div class="flex justify-center items-center min-h-screen ">
+                <div class="flex flex-col items-center p-16 gap-y-10 rounded-xl text-[#FFFFFF] bg-[#FFFFFF33]">
+                    <h1 class="text-7xl poppins-semibold">
+                        <span class="">Score:</span>
+                        <span class="">14</span>
+                    </h1>
+                    <button class="h-16 w-36 rounded-xl bg-[#FFFFFF] text-[#010313] poppins-semibold">Play Again</button>
+                    <p class="poppins-medium">Practice will make you Pro</p>
+                </div>
+            </div>
         </section>
     </main>
 </body>
