@@ -25,7 +25,9 @@ document.addEventListener('keyup',function handleKeyBoardEvent(event){
     
     
     if(expectAlphabet === pressAlphabet){
-        console.log('you got a point')
+        
+        removeBackGroundColor(expectAlphabet);
+        continueGame();
     }
     else{
         console.log('you loss');

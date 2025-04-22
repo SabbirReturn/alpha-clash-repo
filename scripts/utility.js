@@ -16,6 +16,10 @@ function setBackGroundColor(elementById){
     let element = document.getElementById(elementById);
     element.classList.add('bg-amber-400')
 }
+function removeBackGroundColor(elementById){
+    let element = document.getElementById(elementById);
+    element.classList.remove('bg-amber-400')
+}
 function getARandomAlphabet(){
     let alphabetString = 'abcdefghijklmnopqrstuvwxyz';
     let alphabets = alphabetString.split('');
