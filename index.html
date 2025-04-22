@@ -12,17 +12,17 @@
     <main class="bg-[#1E1E1E] min-h-screen bg-[url(images/background.png)] bg-no-repeat bg-center">
         <!-- ..........Home Screen............... -->
 
-        <section class="home min-h-screen flex justify-center items-center ">
+        <section id="home-section" class="home min-h-screen flex justify-center items-center ">
             <div class="flex flex-col justify-center items-center gap-y-10">
                 <h1 class="text-9xl text-[#FFFFFF] anton-regular">Alphabet Clash</h1>
                 <p class="text-[#FFFFFF] poppins-medium">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
-                <button class="bg-[#FFFFFF] h-14 w-32 rounded-xl text-[#010313] poppins-semibold">Play Now</button>
+                <button id="playNow" class="bg-[#FFFFFF] h-14 w-32 rounded-xl text-[#010313] poppins-semibold">Play Now</button>
             </div>
         </section>
 
         <!--..............PlayGround...............  -->
 
-        <section class="playGround hidden">
+        <section id="play-ground" class="playGround hidden">
             <div class="flex justify-center items-center min-h-screen">
                 <!-- ...........Screen................ -->
                 <div class="flex flex-col justify-center items-center gap-10">
@@ -99,5 +99,7 @@
             </div>
         </section>
     </main>
+    <script src="scripts/index.js"></script>
+    <script src="scripts/utility.js"></script>
 </body>
 </html>
