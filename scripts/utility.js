@@ -8,6 +8,14 @@ function removeClass(elementById){
     element.classList.remove('hidden');
 }
 
+function setInnerText(elementById,value){
+    let element = document.getElementById(elementById);
+    element.innerText = value;
+}
+function setBackGroundColor(elementById){
+    let element = document.getElementById(elementById);
+    element.classList.add('bg-amber-400')
+}
 function getARandomAlphabet(){
     let alphabetString = 'abcdefghijklmnopqrstuvwxyz';
     let alphabets = alphabetString.split('');

@@ -11,5 +11,6 @@ document.getElementById('playNow').addEventListener('click', function(){
 
 function continueGame(){
     let alphabet = getARandomAlphabet();
-    console.log(alphabet);
+    setInnerText('screenAlphabet',alphabet);
+    setBackGroundColor(alphabet);
 }
