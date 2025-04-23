@@ -9,11 +9,6 @@ document.getElementById('playNow').addEventListener('click', function(){
     continueGame();
 })
 
-// function handleKeyBoardEvent(){
-
-// }
-
-
 
 document.addEventListener('keyup',function handleKeyBoardEvent(event){
     let pressAlphabet =event.key;
@@ -27,11 +22,6 @@ document.addEventListener('keyup',function handleKeyBoardEvent(event){
     
     
     if(expectAlphabet === pressAlphabet){
-        // let currentScoreElement = document.getElementById('score');
-        // let currentScoreText = currentScoreElement.innerText;
-        // let currentScore = parseInt(currentScoreText);
-        // let updateScore = currentScore+1;
-        // currentScoreElement.innerText = updateScore;
         let currentScore = getInnerText('score');
         let updateScore = currentScore + 1;
         setInnerText('score',updateScore);
@@ -42,6 +32,7 @@ document.addEventListener('keyup',function handleKeyBoardEvent(event){
         let currentLife = getInnerText('life');
         let updateLife = currentLife - 1;
         setInnerText('life',updateLife);
+
         if(currentLife === 0){
             gameOver();
         }
