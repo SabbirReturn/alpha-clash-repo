@@ -1,11 +1,11 @@
 document.getElementById('playNow').addEventListener('click', function(){
     // let homeSection = document.getElementById('home-section');
     // homeSection.classList.add('hidden');
-    addClass('home-section');
+    hideElementById('home-section');
 
     // let playGround = document.getElementById('play-ground');
     // playGround.classList.remove('hidden');
-    removeClass('play-ground')
+    showElementById('play-ground')
     continueGame();
 })
 
@@ -17,7 +17,9 @@ document.getElementById('playNow').addEventListener('click', function(){
 
 document.addEventListener('keyup',function handleKeyBoardEvent(event){
     let pressAlphabet =event.key;
-    console.log('player press', pressAlphabet);
+    if(pressAlphabet === 'Escape'){
+        gameOver()
+    }
 
     let currentAlphabetElement = document.getElementById('screenAlphabet');
     let currentAlphabet = currentAlphabetElement.innerText;
@@ -25,16 +27,36 @@ document.addEventListener('keyup',function handleKeyBoardEvent(event){
     
     
     if(expectAlphabet === pressAlphabet){
-        
+        // let currentScoreElement = document.getElementById('score');
+        // let currentScoreText = currentScoreElement.innerText;
+        // let currentScore = parseInt(currentScoreText);
+        // let updateScore = currentScore+1;
+        // currentScoreElement.innerText = updateScore;
+        let currentScore = getInnerText('score');
+        let updateScore = currentScore + 1;
+        setInnerText('score',updateScore);
         removeBackGroundColor(expectAlphabet);
         continueGame();
     }
     else{
-        console.log('you loss');
+        let currentLife = getInnerText('life');
+        let updateLife = currentLife - 1;
+        setInnerText('life',updateLife);
+        if(currentLife === 0){
+            gameOver();
+        }
     }
     
 })
 
+function gameOver(){
+    hideElementById('play-ground');
+    showElementById('finalScore');
+    let newScore = getElementTextById('score');
+    setInnerText('final-score', newScore);
+    let currentAlphabet = getElementTextById('screenAlphabet')
+    removeBackGroundColor(currentAlphabet);
+}
 
 function continueGame(){
     let alphabet = getARandomAlphabet();
@@ -43,3 +65,11 @@ function continueGame(){
     // set keyboard backGround color
     setBackGroundColor(alphabet);
 }
+
+document.getElementById('play-again').addEventListener('click', function(){
+    hideElementById('finalScore');
+    showElementById('play-ground');
+    setInnerText('score',0);
+    setInnerText('life',5);
+    continueGame();
+})

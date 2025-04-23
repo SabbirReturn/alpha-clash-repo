@@ -72,7 +72,7 @@
                         <button class="bg-[#894189] flex h-10 w-28 justify-center items-center rounded-2xl gap-x-2">
                             <p class="inter-medium">Life</p>
                             <img class="h-5" src="images/heart.png" alt="heart">
-                            <span class="inter-medium">1</span>
+                            <span id="life" class="inter-medium">5</span>
                         </button>
                         <button class="bg-[#360490] flex h-10 w-28 justify-center items-center rounded-2xl gap-x-2">
                             <p class="inter-medium">Score</p>
@@ -86,14 +86,15 @@
 
         <!-- ..................Score Board................. -->
 
-        <section class="scoreBoard hidden">
+        <section id="finalScore" class="scoreBoard hidden">
             <div class="flex justify-center items-center min-h-screen ">
                 <div class="flex flex-col items-center p-16 gap-y-10 rounded-xl text-[#FFFFFF] bg-[#FFFFFF33]">
+                    <h1 class="text-3xl">Game over!</h1>
                     <h1 class="text-7xl poppins-semibold">
                         <span class="">Score:</span>
-                        <span class="">14</span>
+                        <span id="final-score" class="">14</span>
                     </h1>
-                    <button class="h-16 w-36 rounded-xl bg-[#FFFFFF] text-[#010313] poppins-semibold">Play Again</button>
+                    <button id="play-again" class="h-16 w-36 rounded-xl bg-[#FFFFFF] text-[#010313] poppins-semibold">Play Again</button>
                     <p class="poppins-medium">Practice will make you Pro</p>
                 </div>
             </div>

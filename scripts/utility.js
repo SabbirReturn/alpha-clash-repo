@@ -1,9 +1,9 @@
-function addClass(elementById){
+function hideElementById(elementById){
     let element = document.getElementById(elementById);
     element.classList.add('hidden')
 }
 
-function removeClass(elementById){
+function showElementById(elementById){
     let element = document.getElementById(elementById);
     element.classList.remove('hidden');
 }
@@ -20,6 +20,19 @@ function removeBackGroundColor(elementById){
     let element = document.getElementById(elementById);
     element.classList.remove('bg-amber-400')
 }
+function getInnerText(elementById){
+    let elementId = document.getElementById(elementById);
+    let element = elementId.innerText;
+    let value = parseInt(element);
+    return value;
+
+}
+function getElementTextById(elementById){
+    let element = document.getElementById(elementById);
+    let text = element.innerText;
+    return text;
+}
+
 function getARandomAlphabet(){
     let alphabetString = 'abcdefghijklmnopqrstuvwxyz';
     let alphabets = alphabetString.split('');
